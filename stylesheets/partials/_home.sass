@@ -1,0 +1,151 @@
+// HOME
+
+.home-panel
+    @extend .clearfix
+    background: url('../img/bg_pattern.png') white
+    border-bottom: 3px solid $accent
+    border-top: 3px solid $accent
+    display: block
+    padding: 100px 80px 150px
+    position: relative
+    text-align: center
+    width: 100%
+    .home-panel-content
+        display: inline-block
+        margin: 0 auto
+        max-width: $medium
+        width: 100%
+    .panel-header
+        color: $blue
+        font-size: 30px
+        line-height: 30px
+        padding-bottom: 15px
+        text-align: center
+        text-transform: uppercase
+    .panel-header-underline
+        background: $accent
+        display: block
+        height: 6px
+        margin: 50px auto
+        width: 35px
+    .panel-subheader
+        font-size: 20px
+        line-height: 20px
+        padding-bottom: 15px
+    &.slideshow
+        background: url('../img/home.jpg') no-repeat
+        background-size: cover
+        background-position: top left
+        border: 0
+        height: 60vh
+        min-height: 600px
+        position: relative
+        .slide
+            height: auto
+            padding: 20vh 50px 50px
+            text-align: center
+            .slide-caption
+                color: white
+                font-size: 40px
+                padding-bottom: 40px
+    &.services
+        margin-bottom: 200px
+        .panel-service
+            display: inline-block
+            text-align: left
+            width: 30%
+            &:nth-child(2)
+                margin: 0 5% 0 4%
+            .panel-service-header
+                display: block
+                font-size: 20px
+                line-height: 20px
+                padding-bottom: 15px
+            .panel-service-text
+                display: block
+                font-size: 14px
+                line-height: 25px
+    &.about
+        padding: 100px 200px 150px
+        width: 100%
+        .panel-sidebar
+            border-left: 5px solid $accent
+            display: inline-block
+            float: right
+            padding-left: 20px
+            margin-left: 20px
+            text-align: left
+            width: 25%
+            .panel-sidebar-header
+                color: darken($accent, 15%)
+            .phone
+                font-weight: 700
+                padding: 7px 0
+                img
+                    padding-right: 5px
+                    vertical-align: middle
+                    width: 20px
+            .email
+                color: darken($accent, 20%)
+        .panel-subheader, .panel-text
+            clear: left
+            float: left
+            text-align: left
+        .panel-text
+            display: inline-block
+            line-height: 25px
+            width: calc(75% - 25px)
+    &.contact
+        background: transparent
+        border: 0
+        color: white
+        .panel-header
+            color: white
+        .panel-form
+            .panel-form-first, .panel-form-last
+                width: 49%
+            .panel-form-first
+                margin-right: 2%
+            .panel-form-text
+                min-height: 150px
+            .button
+                float: left
+                margin-top: 20px
+    &.footer
+        background: url('../img/bg_pattern.png') $black
+        border-bottom: 0
+        color: white
+        .panel-header
+            color: white
+
+
+// GREATER THAN MAX-WIDTH (HUGE DISPLAY)
+
+@media screen and (min-width: $max_width)
+
+// MEDIUM
+
+@media screen and (max-width: $medium)
+    .home-panel
+        &.services
+            .panel-service
+                display: block
+                margin: 0 auto !important
+                max-width: 400px
+                padding-bottom: 35px
+                width: 100%
+                .panel-service-header
+                    text-align: center
+        &.about
+            padding: 100px 100px 150px
+            .panel-text
+                width: 100%
+            .panel-sidebar
+                display: block
+                margin-top: 20px
+                margin-left: 0
+                width: 100%
+
+// SMALL
+
+@media screen and (max-width: $small)
